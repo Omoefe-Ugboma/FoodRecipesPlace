@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.sidecontainer{
+    background-color: rgb(240, 176, 14);
+    height: 55px;
+    width: 100%;
+}
+
+.sidecontainer nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sidecontainer nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+.sidecontainer nav ul li a {
+    display: block;
+    color: black;
+    padding: 0 15px;
+    line-height: 60px;
+    font-size: 15px;
+    font-weight: 500px;
+    font-family: 'Lucida Sans';
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.sidecontainer nav ul li a:hover {
+    background: white;
+}
+
+.sidecontainer nav ul ul {
+    position: absolute;
+    width: 150px;
+    display: none;
+}
+
+.sidecontainer nav ul li:hover > ul{
+    display: block;
+    width: 150px;
+}
+
+.sidecontainernav ul ul li{
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+.sidecontainer ul ul ul li {
+    position: relative;
+    top: -60px;
+    letter-spacing: 150px;
+}
