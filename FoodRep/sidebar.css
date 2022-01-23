@@ -1,60 +1,204 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.sidecontainer{
-    background-color: rgb(240, 176, 14);
-    height: 55px;
+
+.sidecontainer {
+    z-index: -1;
+}
+
+.sidecontainer nav {
     width: 100%;
+    height: 45px;
+    background: rgb(233, 169, 49);
+    line-height: 15px;
+    padding: 0px 80px;
 }
 
 .sidecontainer nav ul {
     text-align: center;
-    margin: 0;
-    padding: 0;
+    align-items: center;
 }
 
 .sidecontainer nav ul li {
     list-style-type: none;
     display: inline-block;
-    position: relative;
+    text-align: center;
+    padding-top: 18px;
 }
 
 .sidecontainer nav ul li a {
-    display: block;
-    color: black;
-    padding: 0 15px;
-    line-height: 60px;
-    font-size: 15px;
-    font-weight: 500px;
-    font-family: 'Lucida Sans';
-    text-transform: uppercase;
     text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 450;
+    font-family: 'Lucida Sans', 'Lucida Sans';
+    text-transform: uppercase;
+    padding: 0 20px;
+} 
+
+.checkbtn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+    padding-top: 10px;
 }
 
-.sidecontainer nav ul li a:hover {
-    background: white;
-}
-
-.sidecontainer nav ul ul {
-    position: absolute;
-    width: 150px;
+#check {
     display: none;
 }
 
-.sidecontainer nav ul li:hover > ul{
-    display: block;
-    width: 150px;
+@media screen and (max-width: 990px){
+    .sidecontainer nav{
+        padding: 0 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+
+    .sidecontainer nav ul{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        text-align: center;
+        transform: 0.4s ease;
+        z-index: 5;
+    }
+    .sidecontainer nav ul li{
+        display: block;
+        margin: 60px 0;
+        line-height: 20px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
 }
 
-.sidecontainernav ul ul li{
-    width: 150px;
-    float: none;
-    display: list-item;
+.textcarcontainer {
+    top: 0px;
+    padding-top: 0px;
+    position: relative;
+    
+}
+
+ 
+.slidercontainer {
+    height: 590px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     position: relative;
 }
-.sidecontainer ul ul ul li {
-    position: relative;
-    top: -60px;
-    letter-spacing: 150px;
+
+.imgcontainer {
+    height: 670px;
+    width: 100%;
+}
+
+.imgpack {
+    height: 920px;
+    width: 100%;
+}
+.imgpack img {
+    height: 1000px;
+    width: 100vw;
+}
+
+.imgcontainer .slide {
+    top: 55%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 35px;
+    background: rgb(73, 72, 72);
+    cursor: pointer;
+}
+
+.imgcontainer .slide:hover {
+    background: yellow;
+}
+
+.textcarcontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.textcarcontainer h1 {
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Lucida';
+    font-weight: 900;
+    text-align: center;
+}
+
+.textcarcontainer h2{
+    color: yellow;
+    font-size: 60px;
+    font-weight: 400;
+    padding: 0 0;
+    margin: 0px;
+    font-family: Brush Script MT;
+    text-align: center;
+}
+
+.textcarcontainer p {
+    color: white;
+    text-align: center;
+}
+
+.textbtn {
+    background-color: yellow;
+    text-align: center;
+    margin-left: 170px;
+    margin-top: 45px;
+    display: inline-block;
+    padding: 15px 32px;
+    font-size: 13px;
+    color: black;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.slide span {
+    color: white;
+    margin: 0 10px;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.imgcontainer .right{
+    right: 0;
+}
+
+.slidepoints {
+    position: absolute;
+    text-decoration: none;
+    list-style-type: none;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    border-radius: 50px;
+}
+
+.slidepoints li {
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 12px;
+    cursor: pointer;
+    width: 12px;
+    margin: 0 5px;
+}
+
+.slidepoints li:hover {
+    background: yellow;
 }

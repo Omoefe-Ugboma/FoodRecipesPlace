@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="sidebar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
     </head>
     <body>
@@ -20,37 +21,56 @@
         <h1> Flexicon Technology Project</h1>
         <p> The project has started</p>
         <div class="sidecontainer">
-          <nav>
-            <ul>
-                <li><a href="#">Home</a>
-                    <ul>
-                        <li><a href="#">HomePage One</a></li>
-                        <li><a href="#">HomePage Two</a></li>
-                        <li><a href="#">HomePage Three</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Menu</a>
-                    <ul>
-                        <li><a href="#">MenuPage One</a></li>
-                        <li><a href="#">MenuPage Two</a></li>
-                        <li><a href="#">MenuPage Three</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Event</a>
-                    <ul>
-                        <li><a href="#">Event Page</a></li>
-                        <li><a href="#">Event Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Shops</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-          </nav>
-        </div>
-         
-        <script src="" async defer></script>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Event</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Pages</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>    
+            </nav>
+          </div>
+          <div class="slidercontainer">
+
+              <div class="imgcontainer">
+                  <div class="imgpack">
+                      <div class="textcarcontainer">
+                        <div class="textcarcontainer">
+                            <h1>Welcome To our Restaurant</h1>  
+                            <h2>Its all about good food and taste</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quas?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            <button class="textbtn" type="button">Learn More</button>
+                      </div>
+                      <img src="/FoodRep/images/b.jpeg" alt="">
+                      <img src="/FoodRep/images/slideimgsix.jpeg" alt="">
+                      <img src="/FoodRep/images/slideimgthree.jpeg" alt="">
+                  </div>
+                  <div onclick="side_slide_btn(-1)" class="left slide btn">
+                      <span class="fa fa-angle-left"></span>
+                  </div>
+                  <div onclick="side_slide_btn(1)" class="right slide btn">
+                      <span class="fa fa-angle-right"></span>
+                  </div>
+                  <div class="slidepoints">
+                     <ul class="slidepoints">
+                         <li onclick="btn_slide(1)"></li>
+                         <li onclick="btn_slide(2)"></li>
+                         <li onclick="btn_slide(3)"></li>
+                     </ul>
+                  </div>
+              </div>
+          </div>
+    
+          
+        <script src="/FoodRep/script.js" async defer></script>
     </body>
 </html>
