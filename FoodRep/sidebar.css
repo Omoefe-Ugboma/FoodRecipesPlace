@@ -93,8 +93,9 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    opacity: 1.9;
     overflow: hidden;
-    position: relative;
+    position: absolute;
 }
 
 .imgcontainer {
@@ -124,11 +125,27 @@
     background: yellow;
 }
 
+.overlay {
+    background-color: rgb(3, 3, 3);
+    position: relative;
+    
+}
+
 .textcarcontainer {
     position: absolute;
     top: 50%;
     left: 50%;
+    animation-name: textanime;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     transform: translate(-50%, -50%);
+}
+
+@keyframes textanime {
+    0%   {top: 0px;}
+    25%  {top: 400px;}
+    75%  {top: 400px}
+    100% {top: 400px;}
 }
 
 .textcarcontainer h1 {
@@ -152,17 +169,20 @@
 .textcarcontainer p {
     color: white;
     text-align: center;
+    padding-top: 10px;
 }
 
 .textbtn {
     background-color: yellow;
+    color: white;
+    padding: 12px 42px;
+    margin-top: 70px;
+    margin-left: 30%;
+    margin-right: 0%;
     text-align: center;
-    margin-left: 170px;
-    margin-top: 45px;
+    text-decoration: none;
     display: inline-block;
-    padding: 15px 32px;
-    font-size: 13px;
-    color: black;
+    font-size: 16px;
     border-radius: 12px;
     text-transform: uppercase;
     font-weight: 600;
@@ -183,7 +203,7 @@
     position: absolute;
     text-decoration: none;
     list-style-type: none;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
